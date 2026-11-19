@@ -13,17 +13,37 @@ layout: default
   <h1>{{ page.title }}</h1>
   {% if page.summary %}<p class="project-summary">{{ page.summary }}</p>{% endif %}
 
+  {% if page.tools %}
+  <ul class="skills">
+    {% for tool in page.tools %}<li><i class="fa fa-{{ tool.icon }}"></i>{{ tool.label }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
   {% if page.role or page.year or page.client or page.link %}
   <dl class="project-meta">
     {% if page.client %}<div><dt>Client</dt><dd>{{ page.client }}</dd></div>{% endif %}
     {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
-    {% if page.year %}<div><dt>Year</dt><dd>{{ page.year }}</dd></div>{% endif %}
+    {% if page.year %}<div><dt>Date</dt><dd>{{ page.year }}</dd></div>{% endif %}
     {% if page.link %}<div><dt>Link</dt><dd><a href="{{ page.link }}" target="_blank" rel="noopener">{{ page.link_text | default: 'Visit project' }}</a></dd></div>{% endif %}
   </dl>
   {% endif %}
 
   {% if page.cover %}
   <img class="project-cover" src="{{ dir | append: page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title }}" />
+  {% endif %}
+
+  {% if page.links %}
+  <div id="deliverables">
+    <h3>Deliverables</h3>
+    <div class="deliverable-links">
+      {% for l in page.links %}
+      <a class="deliverable" href="{{ l.url }}" target="_blank" rel="noopener">
+        <i class="fa fa-{{ l.icon | default: 'external-link' }}"></i>
+        <p>{{ l.text }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
   {% endif %}
 
   <div class="project-body">

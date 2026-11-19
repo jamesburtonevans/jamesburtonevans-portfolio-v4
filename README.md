@@ -8,17 +8,20 @@ Each project (text, images, per-project SEO): `_projects/<project-name>/index.md
 ## Editing the site info
 
 Open `_data/site.yml`.
-Replace the headshot at `assets/images/headshot.svg` and drop a social-preview image at `assets/images/og-image.png` (1200x630).
-To show a resume download button, put the PDF in `assets/` and set `hero.resume_file`.
+The headshot is `assets/images/headshot_james-evans.png` and the resume is `assets/james-evans_resume.pdf` (set via `hero.headshot` and `hero.resume_file`). Drop a social-preview image at `assets/images/og-image.png` (1200x630).
+`name` is the short name shown in the nav and hero; `full_name` is used in page titles and search-engine data.
+
+The "About" story lives in `about.md` (served at `/about/`), and the music placeholder page in `music/index.html` (set to `noindex`).
 
 ## Adding a project
 
-1. Copy the folder `_projects/example-project` and rename it (the folder name becomes the web address).
+1. Create a folder in `_projects/` (the folder name becomes the web address), e.g. `_projects/my-project`.
 2. Put the project's images in that same folder.
-3. Edit `index.md`: the content in between the '---' lines holds the title, summary, tags, cover image and SEO;
+3. Copy `_templates/project-template.md` to `index.md` in that folder: the content in between the '---' lines holds the title, summary, tags, cover image and SEO;
    - Everything below is the project write-up in Markdown.
    - Reference images by file name only: `![Alt text](screenshot.jpg)`.
-4. A fresh blank copy with notes is in `_templates/project-template.md`.
+4. Optional front matter: `year` (shown as "Date", e.g. `November 2026`), a single `link`, `tools:` (chips, each with a Font Awesome `icon` and a `label`) and `links:` (the "Deliverables" tiles, each with `icon`, `text` and `url`). See any existing project for the format.
+5. For side-by-side text and images, galleries, captions and video embeds, see the HTML blocks (`side-by-side`, `image-grid`, `caption`, `video-embed`, `hint`) in any existing project.
 
 **Reordering:** change `order:` (lower = first). **Hiding:** add `published: false`.
 

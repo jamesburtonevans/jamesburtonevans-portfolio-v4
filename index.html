@@ -56,11 +56,21 @@ layout: default
   <div id="text-container">
     <h1>{{ s.about.heading }}</h1>
     {{ s.about.text | markdownify }}
+    {% if s.about.story_link_text.size > 0 %}<p><a href="{{ '/about/' | relative_url }}">{{ s.about.story_link_text }}</a></p>{% endif %}
   </div>
   {% if s.about.skills.size > 0 %}
   <div id="skills-container">
     <ul class="skills">
       {% for skill in s.about.skills %}<li><i class="fa fa-{{ skill.icon }}"></i>{{ skill.label }}</li>{% endfor %}
+    </ul>
+    {% if s.about.skills_note.size > 0 %}<p class="hint">{{ s.about.skills_note }}</p>{% endif %}
+  </div>
+  {% endif %}
+  {% if s.about.other_work.size > 0 %}
+  <div id="other-work">
+    <h2>{{ s.about.other_work_heading }}</h2>
+    <ul>
+      {% for w in s.about.other_work %}<li><a href="{{ w.url | relative_url }}">{{ w.label }}</a></li>{% endfor %}
     </ul>
   </div>
   {% endif %}

@@ -2,62 +2,77 @@
 
 # - SEO & social sharing
 seo:
-  url: "https://example.com"
-  title: "Your Name - Title / Role"
-  description: "Short description of who you are and what you do."
+  url: "https://jamesburtonevans.com"
+  title: "James Burton Evans - Product Designer and Frontend Developer"
+  description: "James Burton Evans is a Raleigh, NC product designer and frontend developer designing and building usable digital products."
   language: "en"
-  locale: "en_GB"
-  image: "/assets/images/og-image.png"  # Preview image when shared on social media (1200x630 recommended)
-  image_alt: "Your Name - Title / Role"
-  theme_color: "#111111"                # Browser toolbar colour on mobile
+  locale: "en_US"
+  image: ""                             # Preview image when shared on social media, e.g. "/assets/images/og-image.png" (1200x630 recommended)
+  image_alt: "James Burton Evans - Product Designer and Frontend Developer"
+  theme_color: "#191616"                # Browser toolbar colour on mobile
   favicon: ""                           # e.g. "/assets/images/favicon.png" (optional)
   noindex: false
 
 # - Identity
-name: "Your Name"
-role: "Title / Role"
-location: "City, Country"
+name: "James Evans"
+full_name: "James Burton Evans"
+role: "Product Designer"             # Shown in the hero
+job_title: "Product Designer and Frontend Developer"   # Used in search-engine structured data (optional)
+location: "Based in Raleigh, NC"
 
 # - Hero
 hero:
-  greeting: "Hi, I'm"
-  headshot: "/assets/images/headshot.svg"
-  headshot_alt: "Portrait of Your Name"
-  description: "One or two sentences introducing yourself."
-  resume_file: ""
-  resume_text: "Download my resume"
+  greeting: "Hi, it's"
+  headshot: "/assets/images/headshot_james-evans.png"
+  headshot_alt: "Headshot of James Evans"
+  description: "I design and build usable digital products, from interaction design through frontend implementation."
+  resume_file: "/assets/james-evans_resume.pdf"
+  resume_text: "My Resume"
 
 # - Projects section heading
-projects_heading: "Selected Work"
+projects_heading: "Projects"
 
 # - About
 about:
   heading: "About Me"
   text: |
-    A short paragraph about yourself, your approach, and your values.
-
-    You can write a second paragraph by leaving a blank line, and use
-    **bold**, *italics* and [links](https://example.com).
+    I am a designer and developer who works from idea to implementation. I ground my work in the experience of the person using it. I am drawn to work that adds to people's lives rather than substituting for them.
+  skills_note: "I like to use open source software wherever possible."
+  story_link_text: "Read my full story"
+  other_work_heading: "Check out my other work:"
+  other_work:
+    - label: "Music Production / Scoring"
+      url: "/music/"
 # Icons: https://fontawesome.com/v4/icons/
   skills:
     - icon: "code"
-      label: "Skill one"
+      label: "HTML / CSS / JS"
+    - icon: "code"
+      label: "REACT"
+    - icon: "code"
+      label: "PYTHON"
+    - icon: "github"
+      label: "GITHUB"
     - icon: "pencil"
-      label: "Skill two"
+      label: "FIGMA / PENPOT"
+    - icon: "pencil"
+      label: "ADOBE SUITE / INKSCAPE"
     - icon: "cube"
-      label: "Skill three"
+      label: "BLENDER"
+    - icon: "music"
+      label: "MUSIC PRODUCTION (REAPER)"
 
 # - Contact
 contact:
-  heading: "Get in touch"
-  email: "you@example.com"
+  heading: "Let's get in touch!"
+  email: "james@jamesburtonevans.com"
   links:
     - icon: "linkedin"
-      label: "linkedin.com/in/username"
-      url: "https://linkedin.com/in/username"
+      label: "linkedin.com/in/jamesburtonevans"
+      url: "https://linkedin.com/in/jamesburtonevans"
     - icon: "github"
-      label: "github.com/username"
-      url: "https://github.com/username"
+      label: "https://github.com/jamesburtonevans/"
+      url: "https://github.com/jamesburtonevans/"
 
 # - Footer
-footer_text: "© Your Name"
+footer_text: "© James Burton Evans"
